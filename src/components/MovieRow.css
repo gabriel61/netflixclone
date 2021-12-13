@@ -1,0 +1,37 @@
+.movieRow {
+    margin-bottom: 30px;
+}
+.movieRow h2 {
+    /* 0cima 0dir 0baixo 30esq */
+    margin-left: 30px;
+}
+.movieRow--listarea {
+    /* tudo que passar da tela na horizontal será cortado */
+    overflow-x: hidden;
+    padding-left: 30px;
+}
+.movieRow--list {
+    /* aumentando a largura para não ter quebra de linha */
+    width: 9999999px;
+}
+.movieRow--item {
+    /* colocando um item ao lado do outro */
+    display: inline-block;
+    /* largura do filme */
+    width: 150px;
+    /* muda o cursor do mouse para 'clique' */
+    cursor: pointer;
+}
+.movieRow--item img {
+    /* imagem com 100% da area disponivel */
+    width: 100%;
+    /* imagem vai ter 100% mas seu css terá 90%, para assim podermos adicionar efeito ao passar o mouse */
+    transform: scale(0.9);
+    /* qualquer transição feita na imagem durará 0.2s(suavizando efeito ao passar o mouse) */
+    transition: all ease 0.2s;
+}
+/* quando passar o mouse na img... */
+.movieRow--item img:hover {
+    /* ela muda para 100% */
+    transform: scale(1);
+}
