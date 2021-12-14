@@ -10,3 +10,7 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
+/* subindo a lista */
+.lists {
+    margin-top: -150px;
+}
