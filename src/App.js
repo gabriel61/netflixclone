@@ -3,6 +3,7 @@ import './App.css';
 import Tmdb from "./Tmdb";
 import MovieRow from './components/MovieRow';
 import FeaturedMovie from './components/FeaturedMovie';
+import Header from './components/Header';
 
 export default () => {
 
@@ -32,6 +33,8 @@ export default () => {
     //codigo unico para mostragem dos itens da pagina principal
     //header - destaque - as listas - footer
     <div className="page">
+
+      <Header />
 
       {/* quando FeaturedData existir a gente manda o componente */}
       {featuredData &&
