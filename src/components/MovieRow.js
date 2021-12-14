@@ -13,7 +13,7 @@ export default ({title, items}) => {
                 <div className="movieRow--list">
                     {/* >0 ou seja, se houver filmes para mostrar ele vai da um map na lista.
                     um loop dentro do loop das listas para mostrar os filmes */}
-                    {items.results?.length > 0 && items.results.map((item, key)=>(
+                    {items.results.length > 0 && items.results.map((item, key)=>(
                         <div key={key} className="movieRow--item">
                             <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.original_title}/>
                         </div>
