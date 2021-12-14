@@ -2,3 +2,57 @@
     /* todo o tamanho da tela */
     height: 100vh;
 }
+.featured--vertical {
+    /* tamanho herda tamanho anterior(do featured) */
+    width: inherit;
+    height: inherit;
+    /* gradiente linhear de baixo para cima (para cima, 111 para bx 10% e transp para cima 90%*/
+    background: linear-gradient(to top, #111 10%, transparent 90%);
+
+}
+.featured--horizontal {
+    /* tamanho herda tamanho anterior(do featured) */
+    width: inherit;
+    height: inherit;
+    /* gradiente linhear de baixo para cima (para cima, 111 para bx 10% e transp para cima 90%*/
+    background: linear-gradient(to right, #111 30%, transparent 70%);
+}
+.featured--name {
+    /* nome do destaque 60px e negrito */
+    font-size: 60px;
+    font-weight: bold;
+}
+.featured--info {
+    /* a info tem tamanho menor, negrito */
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* otimizando código: */
+.featured--points, 
+.featured--year, 
+.featured--seasons {
+    display: inline-block;
+    margin-right: 15px;
+}
+.featured--points {
+    color: #46D369;
+}
+/* .featured--points {
+    a pontuação tem uma cor verde
+    inline-block seria como uma div ao LADO da outra em junção com o block
+    margem a dir de 15px
+    display: inline-block;
+    color: #46D369;
+    margin-right: 15px;
+
+}
+.featured--year {
+    Ano
+    display: inline-block;
+    margin-top: 15px;
+}
+.featured--seasons {
+    display: inline-block;
+} */
