@@ -9,6 +9,8 @@ export default () => {
 
   const [movieList, setMovieList] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
+  /* variavel para manipulação do backg do Header */
+  const [blackHeader, setBlackHeader] = useState(false);
 
   //useEffect executa a função quando a tele é carregada.
   useEffect(() => {
@@ -29,12 +31,30 @@ export default () => {
     loadAll();
   }, []);
 
+  /* Adicionando evento de monitoramento da propria pagina */
+  useEffect(()=>{
+    const scrollListener = () => {
+      /* monitarar o scroll da tela e quando ele estiver acima de   o blackheader setado para true */
+      if(window.scrollY > 10) {
+        setBlackHeader(true);
+      } else {
+        setBlackHeader(false);
+      }
+    }
+    /* quando na tela houver algum evento de scroll ele vai rodar a função scrollListener */
+    window.addEventListener('scroll', scrollListener);
+    /* removendo evento ao sair da pagina */
+    return () => {
+      window.removeEventListener('scroll', scrollListener);
+    }
+  }, []);
+
   return (
     //codigo unico para mostragem dos itens da pagina principal
     //header - destaque - as listas - footer
     <div className="page">
 
-      <Header />
+      <Header black={blackHeader} />
 
       {/* quando FeaturedData existir a gente manda o componente */}
       {featuredData &&
@@ -46,6 +66,12 @@ export default () => {
           <MovieRow key={key} title={item.title} items={item.items}></MovieRow>
         ))}
       </section>
+
+      <footer>
+        Feito em Live (https://youtube.com/watch?v=tBweoUiMsDg) para estudo de React<br/>
+        Direitos de imagem para Netflix<br/>
+        Dados Extraidos de https://themoviedb.org
+      </footer>
     </div>
   );
 }

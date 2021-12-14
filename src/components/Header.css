@@ -1,0 +1,33 @@
+/* Ajustando a posição do Header */
+header {
+    position: fixed;
+    /* garantindo que ele realmente fique acima */
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* cima e bx = 0, esq e dir = 30 */
+    padding: 0 30px;
+    background: transparent;
+    transition: all ease 0.5s;
+}
+header.black {
+    background-color: #141414;
+}
+.header--logo {
+    height: 30px;
+}
+.header--logo img {
+    height: 100%;
+}
+.header--user {
+    height: 35px;
+}
+.header--user img {
+    height: 100%;
+    border-radius: 3px;
+}
