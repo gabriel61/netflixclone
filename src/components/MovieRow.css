@@ -10,9 +10,12 @@
     overflow-x: hidden;
     padding-left: 30px;
 }
-.movieRow--list {
-    /* aumentando a largura para não ter quebra de linha */
+/* .movieRow--list {
+     aumentando a largura para não ter quebra de linha 
     width: 9999999px;
+} */
+.movieRow--list {
+    transition: all ease 0.5s;
 }
 .movieRow--item {
     /* colocando um item ao lado do outro */
@@ -34,4 +37,34 @@
 .movieRow--item img:hover {
     /* ela muda para 100% */
     transform: scale(1);
+}
+/* SETAS */
+.movieRow--left,
+.movieRow--right {
+    /* fica mais 'flutuante', largura 40, altura é o tamanha de uma img totalmente aberta(ao passar o mouse) */
+    position: absolute;
+    width: 40px;
+    height: 225px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    /* centralizando */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    /* fazendo aparecer só quando passar o mouse na lista */
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+.movieRow--left {
+    left: 0;
+}
+.movieRow--right {
+    right: 0;
+}
+/* passou o mouse? opacidade 1 */
+.movieRow:hover .movieRow--left,
+.movieRow:hover .movieRow--right {
+    opacity: 1;
 }
