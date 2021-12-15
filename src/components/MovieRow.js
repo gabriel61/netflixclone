@@ -8,7 +8,7 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 export default ({title, items}) => {
 
     /* movimentação da SETA p/ esq e dir */
-    const [scrollX, setScrollX] = useState(-400);
+    const [scrollX, setScrollX] = useState(0);
 
     const handleLeftArrow = () => {
         /* ao clicar na seta é passa a metade da tela do usuario para o lado */
